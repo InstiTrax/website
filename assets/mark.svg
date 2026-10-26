@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 251 244" role="img" aria-labelledby="title">
+  <title id="title">InstiTrax logo</title>
+  <rect width="251" height="244" fill="#fff"/>
+  <circle cx="128.5" cy="112.5" r="99" fill="none" stroke="#116d6b" stroke-width="17"/>
+  <path fill="#0e2237" d="M128 22 51 155h154z"/>
+  <path fill="#0e2237" fill-rule="evenodd" d="M7 54h86l-43 72zm22 14 21 34 21-34z"/>
+  <path fill="#0e2237" fill-rule="evenodd" d="M164 54h86l-43 72zm22 14 21 34 21-34z"/>
+  <path fill="#0e2237" fill-rule="evenodd" d="M85 170h86l-43 74zm22 13 21 37 21-37z"/>
+</svg>

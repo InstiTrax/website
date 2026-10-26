@@ -9,6 +9,7 @@
   <meta property="og:description" content="Connected inventory, warehousing, purchasing and manufacturing for your team.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://institrax.com/">
+  <link rel="icon" type="image/svg+xml" href="assets/mark.svg">
   <title>InstiTrax | Keep your operations moving</title>
   <style>
     :root{--teal:#036363;--deep:#103e40;--ink:#173638;--muted:#52696a;--line:#dce7e5;--paper:#f5f8f7;--mint:#e6f2ed}
@@ -71,6 +72,33 @@
     footer{border-top:1px solid var(--line);padding-block:24px}
     .footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:12px;color:var(--muted)}
     .footer-inner p{margin:0}.footer-inner a{color:var(--muted)}
+    /* Brand accents and homepage sections. */
+    header{border-top:5px solid var(--teal)}
+    .brand img{display:block;width:195px;height:auto;max-width:100%}
+    .hero-band{background:radial-gradient(ellipse at top right,#087e79 0,transparent 65%),linear-gradient(125deg,#064a4c,#036363);color:white;overflow:hidden}
+    .hero-band .eyebrow{color:#aee3d5}.hero-band h1 span{color:#aee3d5}
+    .hero-band .intro,.hero-band .hero-note{color:#daefea}
+    .hero-band .button{background:white;color:#034d4d;border-color:white}.hero-band .button:hover{background:#d8f2e9}
+    .hero-band .button.secondary{background:transparent;color:white;border-color:#a2d4c9}.hero-band .button.secondary:hover{background:#ffffff18}
+    .overview{color:var(--ink);border-top:4px solid #87d4c1;box-shadow:0 24px 70px #002e3240}
+    .step{background:var(--teal);border-color:var(--teal);color:white}
+    .promise-bar{background:#e0f1ec;border-bottom:1px solid #beddd4}
+    .promise-bar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;padding-block:18px;color:#035b59;font-size:13px;font-weight:650}
+    .promise-bar span{display:flex;align-items:center;gap:10px}.promise-bar span:before{content:"";width:6px;height:6px;background:var(--teal);border-radius:50%}
+    .feature{position:relative;background:linear-gradient(150deg,#f0f9f6,#fff 75%);border-color:#c9e2db;border-top:3px solid var(--teal)}
+    .feature-icon{width:44px;height:44px;padding:9px;box-sizing:content-box;color:var(--teal);background:#dbefe8;border-radius:12px;margin-bottom:18px;display:block}
+    .feature-number{margin-bottom:14px;letter-spacing:.6px;font-size:11px}
+    .benefits li{border-color:var(--teal)}
+    .faq{padding-block:0 76px;display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:start}
+    .faq-list{border-top:1px solid #bed8d1}details{border-bottom:1px solid #bed8d1;padding:0 0 18px;margin-bottom:18px}
+    summary{cursor:pointer;min-height:48px;padding-top:18px;font-size:15px;font-weight:650;color:var(--deep)}
+    summary:focus-visible{outline:3px solid #bc7900;outline-offset:4px}details[open] summary{color:var(--teal)}
+    details p{font-size:14px;color:var(--muted);margin:14px 0 0}
+    .contact{background:linear-gradient(120deg,#034e50,#036f6a);border-top:4px solid #8fd5c1;box-shadow:0 14px 35px #03636314}
+    .footer-brand{display:flex;gap:12px;align-items:center}
+    .hero>*,.working>*,.faq>*{min-width:0}
+    @media(max-width:900px){.faq{gap:32px}.brand img{width:175px}nav{gap:20px}}
+    @media(max-width:640px){.brand img{width:165px}.nav{justify-content:center}nav{justify-content:center;width:100%;gap:22px}.promise-bar .wrap{justify-content:center;font-size:12px;gap:10px 20px}.faq{grid-template-columns:1fr;gap:8px;padding-bottom:48px}.feature-icon{width:30px;height:30px;margin-bottom:14px}.hero .button{max-width:100%}}
     @media(max-width:900px){.hero{gap:32px;padding-block:64px}.grid{grid-template-columns:repeat(2,1fr)}.working{gap:32px}.contact{gap:28px;padding:32px}}
     @media(max-width:640px){.wrap{width:calc(100% - 36px)}.nav{flex-wrap:wrap;gap:16px;padding-block:18px}.brand{font-size:23px}nav{gap:20px;flex-wrap:wrap}nav a{display:inline-flex;min-height:44px;align-items:center}.hero{grid-template-columns:1fr;padding-block:44px;gap:32px}h1{letter-spacing:-1.5px}.intro{font-size:16px}.overview{padding:22px}.features{padding-block:48px}.grid{grid-template-columns:1fr}.feature{padding:22px}.feature-number{margin-bottom:12px}.working{grid-template-columns:1fr;padding-block:48px;gap:28px}.contact{grid-template-columns:1fr;padding:28px 22px;margin-bottom:48px}.contact-details{border-left:0;border-top:1px solid #496c6b;padding:24px 0 0}.footer-inner{align-items:flex-start;flex-direction:column;gap:8px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -80,11 +108,12 @@
   <a class="skip" href="#main">Skip to content</a>
   <header>
     <div class="wrap nav">
-      <a class="brand" href="#" aria-label="InstiTrax home"><span class="brand-mark" aria-hidden="true">i</span>InstiTrax</a>
-      <nav aria-label="Main navigation"><a href="#features">Features</a><a href="#your-team">Your team</a><a href="#contact">Contact us</a></nav>
+      <a class="brand" href="#" aria-label="InstiTrax home"><img src="assets/logo.png" width="740" height="258" alt="InstiTrax"></a>
+      <nav aria-label="Main navigation"><a href="#features">Features</a><a href="#your-team">Your team</a><a href="#questions">FAQ</a><a href="#contact">Contact us</a></nav>
     </div>
   </header>
   <main id="main">
+    <div class="hero-band">
     <section class="wrap hero" aria-labelledby="hero-title">
       <div>
         <p class="eyebrow">Connected operations. Clearer decisions.</p>
@@ -103,17 +132,19 @@
         </ol>
       </div>
     </section>
+    </div>
+    <div class="promise-bar"><div class="wrap"><span>Inventory &amp; warehousing</span><span>Purchasing &amp; dispatch</span><span>Manufacturing &amp; mobile</span></div></div>
     <section class="features" id="features" aria-labelledby="features-title">
       <div class="wrap">
         <p class="eyebrow">One connected workspace</p><h2 id="features-title">Bring the moving parts together.</h2>
         <p class="section-intro">Keep everyday tasks connected across your business, with the tools your team needs to manage stock and get work done.</p>
         <div class="grid">
-          <article class="feature"><span class="feature-number" aria-hidden="true">01 / INVENTORY</span><h3>Stock you can follow</h3><p>Manage products, stock movements, serial numbers and codes. Use stocktakes to review what is on hand.</p></article>
-          <article class="feature"><span class="feature-number" aria-hidden="true">02 / WAREHOUSING</span><h3>A place for every product</h3><p>Organise warehouses and locations, review balances and transfer stock between warehouses.</p></article>
-          <article class="feature"><span class="feature-number" aria-hidden="true">03 / PURCHASING</span><h3>Keep purchasing connected</h3><p>Manage suppliers, purchase orders and receiving so incoming stock stays linked to its order.</p></article>
-          <article class="feature"><span class="feature-number" aria-hidden="true">04 / MANUFACTURING</span><h3>From materials to output</h3><p>Define bills of materials, plan work orders and follow production steps, material use and quality checks.</p></article>
-          <article class="feature"><span class="feature-number" aria-hidden="true">05 / DISPATCH</span><h3>Follow the handover</h3><p>Connect customer orders, loading and waybills to support dispatch and delivery confirmation.</p></article>
-          <article class="feature"><span class="feature-number" aria-hidden="true">06 / MOBILE</span><h3>Support work on the floor</h3><p>Help your team scan codes, record counts and complete supported warehouse and production tasks from the mobile app.</p></article>
+          <article class="feature"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z M3 8v9l9 5 9-5V8 M12 13v9 M7.5 5.5l9 5"/></svg><span class="feature-number" aria-hidden="true">01 / INVENTORY</span><h3>Stock you can follow</h3><p>Manage products, stock movements, serial numbers and codes. Use stocktakes to review what is on hand.</p></article>
+          <article class="feature"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12 M1 21h22 M7 21V11h10v10 M7 15h10 M7 18h10"/></svg><span class="feature-number" aria-hidden="true">02 / WAREHOUSING</span><h3>A place for every product</h3><p>Organise warehouses and locations, review balances and transfer stock between warehouses.</p></article>
+          <article class="feature"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v19l-3-2-3 2-3-2-3 2V3Z M9 8h6 M9 12h6 M9 16h3"/></svg><span class="feature-number" aria-hidden="true">03 / PURCHASING</span><h3>Keep purchasing connected</h3><p>Manage suppliers, purchase orders and receiving so incoming stock stays linked to its order.</p></article>
+          <article class="feature"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 3V7l6 4V3h5v18H3Z M7 17h1 M12 17h1 M17 17h1"/></svg><span class="feature-number" aria-hidden="true">04 / MANUFACTURING</span><h3>From materials to output</h3><p>Define bills of materials, plan work orders and follow production steps, material use and quality checks.</p></article>
+          <article class="feature"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 5h12v12H2V5Z M14 10h4l4 4v3h-8 M5 17a2 2 0 1 0 4 0 M16 17a2 2 0 1 0 4 0"/></svg><span class="feature-number" aria-hidden="true">05 / DISPATCH</span><h3>Follow the handover</h3><p>Connect customer orders, loading and waybills to support dispatch and delivery confirmation.</p></article>
+          <article class="feature"><svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 5h4 M10 19h4 M9 12l2 2 4-4"/></svg><span class="feature-number" aria-hidden="true">06 / MOBILE</span><h3>Support work on the floor</h3><p>Help your team scan codes, record counts and complete supported warehouse and production tasks from the mobile app.</p></article>
         </div>
       </div>
     </section>
@@ -121,11 +152,19 @@
       <div><p class="eyebrow">Designed around everyday work</p><h2 id="team-title">A clearer picture.<br>A more connected team.</h2><p>Whether you are reviewing stock in the office or recording a count in the warehouse, InstiTrax helps keep the work connected.</p></div>
       <ul class="benefits"><li><strong>Keep useful context close</strong><p>Follow related products, orders and movements without relying on disconnected records.</p></li><li><strong>Give people the right access</strong><p>Company boundaries and user permissions help control access to business information.</p></li><li><strong>Build a traceable record</strong><p>Use workflow history, approvals and supporting documents to understand how work progressed.</p></li></ul>
     </section>
+    <section class="wrap faq" id="questions" aria-labelledby="faq-title">
+      <div><p class="eyebrow">A few useful answers</p><h2 id="faq-title">Getting to know InstiTrax.</h2><p class="section-intro">Start with the essentials. For anything else, our team is an email away.</p></div>
+      <div class="faq-list">
+        <details><summary>What can our team manage with InstiTrax?</summary><p>InstiTrax connects inventory, warehouses, supplier purchasing, customer dispatch and manufacturing workflows. The mobile app supports tasks such as scanning, stock counts and production work.</p></details>
+        <details><summary>Can different team members have different access?</summary><p>Yes. User permissions control access to supported tasks, while company checks help keep each company's records separate.</p></details>
+        <details><summary>Can we see how it would work for our business?</summary><p>Email <a href="mailto:institrax@gmail.com?subject=InstiTrax%20demo%20request">institrax@gmail.com</a> to request a demo. Tell us a little about your team and the workflows you would like to explore.</p></details>
+      </div>
+    </section>
     <section class="wrap contact" id="contact" aria-labelledby="contact-title">
       <div><p class="eyebrow">Let’s start a conversation</p><h2 id="contact-title">Tell us what your team needs.</h2><p>Have a question about InstiTrax or want to explore it for your business? Email us to discuss your workflow or request a demo.</p></div>
       <div class="contact-details"><p class="label">Email our team</p><a class="email" href="mailto:institrax@gmail.com">institrax@gmail.com</a><p class="hint">Tell us your name, company and how we can help.</p><a class="button" href="mailto:institrax@gmail.com?subject=InstiTrax%20enquiry">Send us an email</a></div>
     </section>
   </main>
-  <footer><div class="wrap footer-inner"><p>&copy; 2026 InstiTrax. All rights reserved.</p><a href="mailto:institrax@gmail.com">institrax@gmail.com</a><a href="#main">Back to top</a></div></footer>
+  <footer><div class="wrap footer-inner"><div class="footer-brand"><img src="assets/mark.svg" alt="" width="40" height="40" loading="lazy"><p>&copy; 2026 InstiTrax. All rights reserved.</p></div><a href="mailto:institrax@gmail.com">institrax@gmail.com</a><a href="#main">Back to top</a></div></footer>
 </body>
 </html>
